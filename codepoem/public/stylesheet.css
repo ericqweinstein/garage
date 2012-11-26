@@ -1,0 +1,41 @@
+body {
+  background-image: url("/public/brace.png");
+  background-repeat:no-repeat;
+}
+
+div {
+  margin-left: 20%;
+}
+
+h2{
+  font-weight: 400;
+  text-align: center;
+  font-family: Garamond, Times, serif;
+  color: #93aec2;
+}
+
+p {
+  font-family: Inconsolata, Menlo, Courier, monotype;
+  font-size: 0.75em;
+  color: #93aec2;
+}
+
+.red {
+  color: #c44d58;
+}
+
+.class {
+  color: #e7a83e;
+}
+
+.symbol {
+  color: #ea525f;
+}
+
+.keyword {
+  color: #388099;
+}
+
+#quote {
+  margin-left: 20%;
+}
