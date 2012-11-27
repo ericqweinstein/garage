@@ -34,3 +34,17 @@ def problem_two
 end
 
 # problem_two ==> 4613732
+
+# Problem 3: What is the largest prime
+# factor of the number 600851475143?
+
+def problem_three
+  def find_factors(number)
+    return [] if number == 1
+    factor = (2..number).find { |x| number % x == 0 }
+    [factor] + find_factors(number / factor)
+  end
+  find_factors(600851475143).max
+end
+
+# problem_three ==> 6857
