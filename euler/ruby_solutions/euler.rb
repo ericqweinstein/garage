@@ -46,7 +46,7 @@ def problem_three
     factor = (2..number).find { |x| number % x == 0 }
     [factor] + find_factors(number / factor)
   end
-  find_factors(600851475143).max
+  find_factors(600_851_475_143).max
 end
 
 # problem_three ==> 6857
