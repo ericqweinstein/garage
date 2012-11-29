@@ -50,3 +50,23 @@ def problem_three
 end
 
 # problem_three ==> 6857
+
+#####
+
+# Problem 4: Find the largest palindrome
+# made from the product of two 3-digit numbers.
+
+def problem_four
+  def palindrome?(n)
+    n.to_s == n.to_s.reverse ? true : false
+  end
+  max = 0
+  100.upto(999).each do |a|
+    a.upto(999).each do |b|
+      max = a * b if palindrome?(a * b) && (a * b) > max
+    end
+  end
+  max
+end
+
+# problem_four ==> 906609
