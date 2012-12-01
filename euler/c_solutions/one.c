@@ -26,5 +26,8 @@ int main(void)
     }
   } 
   printf("%d\n", runningTotal);
-  return 0;
+  return runningTotal;
+
+  // Answer: 233168
+
 }

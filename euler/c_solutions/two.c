@@ -29,7 +29,10 @@ int main(void)
     current = next;
   }
   printf("%d\n", sum);
-  return 0;
+  return sum;
+
+  // Answer: 4613732
+
 }
 
 int fibNext(int first, int second)
