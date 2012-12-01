@@ -1,5 +1,5 @@
 # These will all live in one file, since I figure
-# the solutions  will lend themselves to code reuse.
+# the solutions will lend themselves to code reuse.
 
 # Problem 1: Add all the natural numbers below one
 # thousand that are multiples of three or five.
