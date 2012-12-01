@@ -79,7 +79,7 @@ end
 require 'rational'
 
 def problem_five
-  answer = (1..20).inject(1) { |res, n| res.lcm n }
+  (1..20).inject(1) { |res, n| res.lcm n }
 end
 
 # problem_five ==> 232792560
