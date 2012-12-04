@@ -16,7 +16,7 @@ int main(void)
 {
   int largestPalindrome = 0;
 
-  // Three digit numbers only run from 100 to 999, so we'll
+  // Three digit numbers only run from 100 to 999, so
   // we'll limit the ranges of our loops to those numbers
   int i;
   for (i = 100; i < 999; i++)
