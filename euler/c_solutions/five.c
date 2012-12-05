@@ -32,7 +32,7 @@ int main(void)
     if (lcm % 19) continue;
     break;
   }
-  printf("%1d\n", lcm);
+  printf("%d\n", lcm);
   return lcm;
 
   // Answer: 232792560
