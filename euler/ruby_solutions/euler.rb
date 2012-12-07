@@ -123,7 +123,7 @@ def problem_eight
   start, stop = 0, 5
   window = big_number[start, stop]
   largest_product = 0
-  while (stop < big_number.length)
+  while stop < big_number.length
     current_product = window[0].to_i * window[1].to_i * window[2].to_i * window[3].to_i * window[4].to_i
     if current_product > largest_product
       largest_product = current_product
@@ -133,6 +133,45 @@ def problem_eight
   largest_product
 end
 
-# Works in 1.9.3, but not in 1.8.7 for some arcane reason
+# Works in 1.9.3, but not in 1.8.7 for some reason
 
 # problem_eight ==> 40824
+
+#####
+
+# Problem 9: Find the product of the Pythagorean
+# triple elements whose sum is 1,000.
+
+def problem_nine(sum)
+  (1..sum).each do |m|
+    (1..sum).each do |n|
+      # Thank you, Wikipedia:
+      # http://en.wikipedia.org/wiki/Formulas_for_generating_Pythagorean_triples
+      a = n**2 - m**2
+      b = 2 * m * n
+      c = n**2 + m**2
+      return a, b, c if a + b + c == sum
+    end
+  end
+end
+
+# problem_nine ==> [375, 200, 425]
+#
+# The problem asks for the product, which
+# is 31875000, but I was more interested
+# in the actual elements of the triple
+
+#####
+
+# Problem 10: Find the sum of all
+# prime numbers below two million.
+
+# Let's try a 1.9.3-style solution
+
+require 'prime'
+
+def problem_ten
+  Prime.each(2_000_000).inject(0) { |n, sum| n + sum }
+end
+
+# problem_ten ==> 142913828922
