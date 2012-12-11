@@ -32,25 +32,21 @@ int nthPrime(int n)
   int counter = 0;
   while (counter <= n)
   {
-    bool isPrime = true;
     int i;
-    for (i = 2; i <= sqrt(candidate) && isPrime; i++)
+    int upperLimit = sqrt(candidate);
+    for (i = 2; i <= upperLimit; i++)
     {
       if (candidate % i == 0)
       {
-        isPrime = false;
+        break;
       }
     }
-    if (isPrime)
+    if (i > upperLimit)
     {
       nthPrime = candidate;
-      candidate++;
       counter++;
     }
-    else
-    {
-      candidate++;
-    }
+    candidate++;
   }
   return nthPrime;
 }

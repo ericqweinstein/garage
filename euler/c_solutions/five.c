@@ -21,15 +21,15 @@ int main(void)
   int lcm = 20;
   while (true) {
     lcm += 20;
-    if (lcm % 11) continue;
-    if (lcm % 12) continue;
-    if (lcm % 13) continue;
-    if (lcm % 14) continue;
-    if (lcm % 15) continue;
-    if (lcm % 16) continue;
-    if (lcm % 17) continue;
-    if (lcm % 18) continue;
-    if (lcm % 19) continue;
+    if ((lcm % 11 == 0) &&
+       (lcm % 12 == 0) &&
+       (lcm % 13 == 0) &&
+       (lcm % 14 == 0) &&
+       (lcm % 15 == 0) &&
+       (lcm % 16 == 0) &&
+       (lcm % 17 == 0) &&
+       (lcm % 18 == 0) &&
+       (lcm % 19 == 0))
     break;
   }
   printf("%d\n", lcm);
