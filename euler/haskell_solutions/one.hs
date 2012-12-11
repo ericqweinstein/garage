@@ -6,4 +6,4 @@
 problemOne :: Integer -> Integer
 problemOne x = sum [n | n <- [1..x-1] , n `mod` 3 == 0 || n `mod` 5 == 0]
 
--- problemOne(1000) ==> 233168
+-- problemOne 1000 ==> 233168
