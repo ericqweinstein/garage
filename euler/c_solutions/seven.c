@@ -7,11 +7,6 @@
 #include <stdio.h>
 #include <math.h>
 
-// Again, could use <stdbool.h>, gonna be fancy
-typedef int bool;
-#define true 1
-#define false 0
-
 int nthPrime(int);
 
 int main(void)
