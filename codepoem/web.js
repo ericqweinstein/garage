@@ -1,4 +1,6 @@
 // Load libraries
+"use strict";
+
 var requireJS = require('requirejs');
 var express = require('express');
 var app = express();
