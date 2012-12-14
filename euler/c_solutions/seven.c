@@ -27,6 +27,10 @@ int nthPrime(int n)
   int counter = 0;
   while (counter <= n)
   {
+    // If you divide a number by every integer
+    // between two and its own square root
+    // (inclusive) and never get a remainder
+    // of zero, that number is prime
     int i;
     int upperLimit = sqrt(candidate);
     for (i = 2; i <= upperLimit; i++)
