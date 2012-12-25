@@ -4,7 +4,7 @@
 -- triple elements whose sum is 1,000.
 
 problemNine :: [(Integer, Integer, Integer)]
-problemNine = [ (a, b, c) | a <- [1..500], b <- [1..500], c <- [1..500], a^2 + b^2 == c^2, a + b + c == 1000 ]
+problemNine = [(a, b, c) | a <- [1..500], b <- [1..500], c <- [1..500], a^2 + b^2 == c^2, a + b + c == 1000]
 
 -- problemNine ==> [(200,375,425),(375,200,425)]
 --
