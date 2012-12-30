@@ -17,6 +17,9 @@ module Channel
       if content.match(/(?:hi|hello|hey)\s*,?\s*(?:ruben)/i)
         Hello.hello
       end
+      if content.match(/(?:what\s*time)/i)
+        Message.say "Right now it's #{Time.now.localtime.strftime("%H:%M:%S %p")}."
+      end
     end
 
     if inbound.match(/^:(.*)!(.*) JOIN ##{$channel}/)
