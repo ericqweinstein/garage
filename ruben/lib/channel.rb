@@ -28,8 +28,6 @@ module Channel
     end
   end
 
-  # TODO: Figure out why Ruben doesn't send his PART message when leaving
-
   def Channel.leave
     Message.say "Goodbye!"
     Message.send "PART ##{$channel} :Ruben out"
