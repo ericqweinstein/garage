@@ -1,5 +1,5 @@
 module Hello
-  def Hello.hello
+  def self.hello
     Message.say "Hello!"
   end
 end
