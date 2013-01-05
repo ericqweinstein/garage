@@ -1,4 +1,4 @@
-require 'acme'
+require './lib/acme'
 
 describe Acme do
   it "should check whether a product is made by Acme" do

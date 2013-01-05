@@ -1,5 +1,6 @@
-task :default => [:test]
+require 'rake'
+require 'rspec/core/rake_task'
 
-task :test do
-  ruby "spec/acme_spec.rb"
-end
+RSpec::Core::RakeTask.new(:spec)
+
+task :default => :spec
