@@ -1,5 +1,5 @@
 module Channel 
-  def Channel.listen
+  def self.listen
     inbound = $socket.gets
     puts "<< " << inbound
 
@@ -28,7 +28,7 @@ module Channel
     end
   end
 
-  def Channel.leave
+  def self.leave
     Message.say "Goodbye!"
     Message.send "PART ##{$channel} :Ruben out"
     Message.send "QUIT"
