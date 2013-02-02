@@ -1,4 +1,5 @@
 IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:SAVE_HISTORY] = 1000
 
 HASH = {
   :bob => 'Marley', :mom => 'Barley',
