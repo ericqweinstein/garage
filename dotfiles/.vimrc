@@ -37,7 +37,7 @@ set backspace=indent,eol,start
 " Raise dialogue instead of failing command
 set confirm
 
-" Show the matching bracket for the last }
+" Show the matching bracket for the last {
 set showmatch
 
 " 256 colors
@@ -51,5 +51,20 @@ set directory=~/.vim/backup
 set hlsearch
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 
+" Use %% magic to open files in the same dir as the current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Remap split screen
+noremap WW <C-w>v
+noremap WD <C-w>w
+noremap WE <C-w>q
+
+" Remap <Esc>
+inoremap jj <Esc>
+
+" Hash rocket shortcut
+inoremap ii =>
+
 " Tomorrow Night Bright color scheme
 colorscheme Tomorrow-Night-Bright
+

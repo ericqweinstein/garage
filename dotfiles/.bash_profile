@@ -6,3 +6,6 @@ export PS1="\e[1;31m\h[\W] \u \@ \$\e[m "
 
 # Aliases
 alias ls="ls -p"
+alias l="ls -p"
+alias c="clear"
+alias u="cd .. ;"
