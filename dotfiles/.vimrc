@@ -68,3 +68,11 @@ inoremap ii =>
 " Tomorrow Night Bright color scheme
 colorscheme Tomorrow-Night-Bright
 
+" Settings for VimClojure
+
+" Highlight Clojure's builtins
+let g:clj_highlight_builtins=1
+
+" Rainbow parens FTW
+let g:clj_paren_rainbow=1
+
