@@ -1,6 +1,6 @@
-// Load libraries
 "use strict";
 
+// Load libraries
 var requireJS = require('requirejs');
 var express = require('express');
 var app = express();
@@ -16,3 +16,4 @@ var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log('Listening on port ' + port + '...');
 });
+
