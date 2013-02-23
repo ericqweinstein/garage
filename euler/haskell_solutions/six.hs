@@ -8,3 +8,4 @@ problemSix :: Integer
 problemSix = ((sum [1..100])^2) - (sum $ map (^2) [1..100])
 
 -- problemSix ==> 25164150
+

@@ -10,3 +10,4 @@ problemNine = [(a, b, c) | a <- [1..500], b <- [1..500], c <- [1..500], a^2 + b^
 --
 -- The product is 31875000, but I'm more interested in the triple itself.
 -- This program works, but is too slow—it takes several minutes to run.
+
