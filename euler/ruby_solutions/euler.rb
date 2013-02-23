@@ -30,6 +30,7 @@ def problem_two
     previous = current
     current = next_up
   end
+
   total
 end
 
@@ -46,6 +47,7 @@ def problem_three
     factor = (2..number).find { |x| number % x == 0 }
     [factor] + find_factors(number / factor)
   end
+
   find_factors(600_851_475_143).max
 end
 
@@ -58,14 +60,17 @@ end
 
 def problem_four
   def palindrome?(n)
-    n.to_s == n.to_s.reverse ? true : false
+    n.to_s == n.to_s.reverse
   end
+
   max = 0
+
   100.upto(999).each do |a|
     a.upto(999).each do |b|
       max = a * b if palindrome?(a * b) && (a * b) > max
     end
   end
+
   max
 end
 
@@ -130,11 +135,12 @@ def problem_eight
     end
     window = big_number[start += 1, stop += 1]
   end
+
   largest_product
 end
 
-# Works in 1.9.3, but not in 1.8.7 for some reason
-
+# Works in 1.9.3, but not in 1.8.7
+#
 # problem_eight ==> 40824
 
 #####
