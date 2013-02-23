@@ -44,3 +44,4 @@ int findTriple(int sum)
   }
   return result;
 }
+

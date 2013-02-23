@@ -42,3 +42,4 @@ int sumOfSquares(int limit)
   }
   return current;
 }
+

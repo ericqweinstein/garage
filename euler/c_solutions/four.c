@@ -63,3 +63,4 @@ int isPalindrome(int n)
   return resultOfComparison;
   // Will be 0 for palindromes
 }
+

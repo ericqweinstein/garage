@@ -40,3 +40,4 @@ int fibNext(int first, int second)
   // Does not handle the first two entries
   return first + second;
 }
+
