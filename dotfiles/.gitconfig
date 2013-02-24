@@ -20,4 +20,5 @@
   bulldoze = push --force
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
+

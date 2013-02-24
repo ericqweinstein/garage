@@ -9,3 +9,4 @@ alias ls="ls -p"
 alias l="ls -p"
 alias c="clear"
 alias u="cd .. ;"
+
