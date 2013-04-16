@@ -71,8 +71,8 @@ colorscheme Tomorrow-Night-Bright
 " Settings for VimClojure
 
 " Highlight Clojure's builtins
-let vimclojure#HighlightBuiltins = 1
+let vimclojure#HighlightBuiltins=1
 
 " Rainbow parens FTW
-let vimclojure#ParenRainbow = 1
+let vimclojure#ParenRainbow=1
 
