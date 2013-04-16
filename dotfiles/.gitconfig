@@ -17,6 +17,8 @@
   st = status
   b = branch
   aa = add --all
+  cob = checkout -b
+  lop = branch -D
   bulldoze = push --force
 
 [credential]
