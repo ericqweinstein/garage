@@ -1,5 +1,4 @@
 IRB.conf[:PROMPT_MODE] = :SIMPLE
-IRB.conf[:SAVE_HISTORY] = 1000
 
 HASH = {
   :bob => 'Marley', :mom => 'Barley',
@@ -20,6 +19,23 @@ end
 
 def c
   system 'clear'
+end
+
+def validate(string)
+  stack  = []
+  lookup = { '(' => ')', '[' => ']', '{' => '}', '<' => '>' }
+  left   = lookup.keys
+  right  = lookup.values
+
+  string.each_char do |char|
+    if left.include? char
+      stack << char
+    elsif right.include? char
+      return false if stack.empty? || (lookup[stack.pop] != char)
+    end
+  end
+
+  return stack.empty?
 end
 
 class Object
