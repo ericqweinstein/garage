@@ -8,7 +8,8 @@ IRB.conf[:PROMPT][:CUSTOM] = {
   :RETURN   => "\e[0;31m=> %s\n\e[0;34m"                   # Format to return value
 }
 
-IRB.conf[:PROMPT_MODE] = :CUSTOM
+IRB.conf[:PROMPT_MODE]  = :CUSTOM
+IRB.conf[:SAVE_HISTORY] = 1000
 
 # Default hash and array for testing
 HASH = {
