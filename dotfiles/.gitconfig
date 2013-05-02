@@ -19,6 +19,7 @@
   aa = add --all
   cob = checkout -b
   lop = branch -D
+  unstage = reset HEAD --
   bulldoze = push --force
 
 [credential]
