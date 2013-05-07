@@ -7,6 +7,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 source ~/.git-prompt.sh
+source ~/up.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 
@@ -20,4 +21,5 @@ alias ls="ls -p"
 alias l="ls -p"
 alias c="clear"
 alias u="cd .. ;"
+alias back="cd - ;"
 
