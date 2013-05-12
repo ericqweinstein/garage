@@ -1,0 +1,8 @@
+# Set readline options for bash
+
+# Less cowbell
+set bell-style visible
+
+# Remap <Esc>
+"jj": "\e"
+
