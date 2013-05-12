@@ -37,6 +37,9 @@ set backspace=indent,eol,start
 " Raise dialogue instead of failing command
 set confirm
 
+" Less cowbell
+set visualbell
+
 " Show the matching bracket for the last {
 set showmatch
 
@@ -67,8 +70,6 @@ inoremap ii =>
 
 " Tomorrow Night Bright color scheme
 colorscheme Tomorrow-Night-Bright
-
-" Settings for VimClojure
 
 " Highlight Clojure's builtins
 let vimclojure#HighlightBuiltins=1
