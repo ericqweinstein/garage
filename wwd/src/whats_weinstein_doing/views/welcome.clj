@@ -24,12 +24,15 @@
                                 wwd-access-token
                                 wwd-access-token-secret))
 
-(def tweet (statuses-user-timeline
+(defn get-tweet []
+  (statuses-user-timeline
              :oauth-creds my-creds
              :params {:screen-name "ericqweinstein" :count 1}))
 
 ;; Routes
 (defpage [:get "/"] []
+         (def tweet
+           (get-tweet))
          (common/layout
            [:div.hero-unit
             [:h1 "What's Weinstein Doing?"]]
