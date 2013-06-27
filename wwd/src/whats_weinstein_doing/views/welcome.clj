@@ -27,6 +27,7 @@
 (def tweet (statuses-user-timeline
              :oauth-creds my-creds
              :params {:screen-name "ericqweinstein" :count 1}))
+
 ;; Routes
 (defpage [:get "/"] []
          (common/layout
