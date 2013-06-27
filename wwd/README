@@ -1,0 +1,21 @@
+ ??? What's Weinstein Doing ???
+
+-= A website written in Noir =-
+
+Q: What is this?
+A: A tiny web application.
+
+Q: What does it do?
+A: It just gets my most recent Tweet (TM).
+
+Q: Why?
+A: See "how," below.
+
+Q: How?
+A: Noir: www.webnoir.org
+
+
+Copyright (c) 2013 Eric Weinstein
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
