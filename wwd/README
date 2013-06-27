@@ -6,7 +6,7 @@ Q: What is this?
 A: A tiny web application.
 
 Q: What does it do?
-A: It just gets my most recent Tweet (TM).
+A: It grabs my most recent tweet with a "#wwd" hashtag.
 
 Q: Where does it live?
 A: whats-weinstein-doing.herokuapp.com
