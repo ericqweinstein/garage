@@ -18,27 +18,40 @@
 (def wwd-access-token-secret
   (get (System/getenv) "WWD_ACCESS_TOKEN_SECRET"))
 
-;; Talk to the Twitters
+;; Authenticate with the Twitters
 (def my-creds (make-oauth-creds wwd-consumer-key
                                 wwd-consumer-secret
                                 wwd-access-token
                                 wwd-access-token-secret))
 
-(defn get-tweet []
+;; Grab like, I dunno... 20 tweets
+(defn get-tweets []
   (statuses-user-timeline
              :oauth-creds my-creds
-             :params {:screen-name "ericqweinstein" :count 1}))
+             :params {:screen-name "ericqweinstein" :count 20}))
 
-;; Routes
+;; The first of our myriad routes
 (defpage [:get "/"] []
-         (def tweet
-           (get-tweet))
+
+         ;; Poll Twitter on page refresh
+         (def tweets
+           (get-tweets))
+
+         ;; Test whether our tweet is a #wwd tweet
+         (defn wwd-tweet? [tweet]
+           (= (-> tweet :entities :hashtags (first) :text) "wwd"))
+
+         ;; Grab the first #wwd tweet
+         (def first-wwd-tweet
+           (filter wwd-tweet? (-> tweets :body)))
+
          (common/layout
            [:div.hero-unit
             [:h1 "What's Weinstein Doing?"]]
-            [:p.lead.center "{ " (-> tweet :body (first) :text) " }"]
+            [:p.lead.center "{ " (-> first-wwd-tweet (first) :text) " }"]
             [:a.pull-right {:href "/about"} "About"]))
 
+;; The last of our myriad routes
 (defpage [:get "/about"] []
          (common/layout
            [:div.hero-unit
