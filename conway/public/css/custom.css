@@ -1,0 +1,30 @@
+/* General */
+
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+
+.life-header {
+  font-family: 'Oleo Script', cursive;
+  text-align: center;
+  display: none;
+}
+
+/* Board */
+
+canvas {
+  height: 400px;
+  width: 100%;
+  border: 2px solid #1B58DE;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Button */
+
+.btn-container {
+  display: none;
+}
+
+button {
+  font-variant: small-caps;
+}
+

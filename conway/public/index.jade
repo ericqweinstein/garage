@@ -1,0 +1,25 @@
+doctype 5
+html
+  head
+    title Conway's Game of Life
+
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/custom.css')
+    script(src='js/jquery-2.0.2.min.js')
+    script(src='js/bootstrap.min.js')
+
+  body
+    div.container.life-header
+      div.row
+        h1 Conway's Game of Life
+        p.lead A Zero-Player Game for the Whole Family
+    div.container
+      div.row
+        canvas#myCanvas Your browser does not support the HTML5 Canvas element.
+    div.container
+      div.row.offset5.btn-container
+        br
+        button.btn.btn-primary.btn-large start
+
+    script(src='js/life.js')
+
