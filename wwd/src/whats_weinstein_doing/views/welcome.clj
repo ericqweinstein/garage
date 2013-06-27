@@ -40,7 +40,7 @@
            [:div.hero-unit
             [:h1 "I'm Eric."]]
             [:p.lead.center "I made this so people would stop asking me what I'm doing."]
-            [:p.lead.center "(Just kidding. I made this to play around with Clojure."]
+            [:p.lead.center "(Just kidding. I made this to play around with Clojure.)"]
             [:a.pull-right {:href "https://github.com/ericqweinstein/garage/tree/master/wwd"} "Source"]
             [:a.pull-right {:href "/"} "Home"]))
 
