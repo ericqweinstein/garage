@@ -11,7 +11,7 @@
     CELL_SIZE: 5
   , GRID_WIDTH: canvas.width
   , GRID_HEIGHT: canvas.height
-  , SPEED: 10
+  , SPEED: 20
   , GRID_COLOR: '#1B58DE'
   , DEAD_COLOR: '#C8ECF7'
   , ALIVE_COLOR: '#050AA1'
@@ -79,66 +79,72 @@
   };
 
   Grid.prototype.cellAt = function(x, y) {
-    return this[x] && this[x][y];
+    return this.cells[x] && this.cells[x][y];
   };
 
   Grid.prototype.iterate = function(fn) {
-    for (var x in this) {
-      if (this.hasOwnProperty(x)) {
-        for (var y in this[x]) {
-          if (this[x].hasOwnProperty(y)) {
-            fn(this[x][y]);
-          }
-        }
+    if (this.cellsCache) return this.cellsCache.forEach(fn);
+
+    this.cellsCache = [];
+
+    var rows = this.cells;
+    for (var i = 0, l = rows.length; i < l; i++) {
+      if (!rows[i]) continue;
+      var cells = rows[i];
+      for (var j = 0, l2 = rows.length; j < l2; j++) {
+        if (!cells[j]) continue;
+        this.cellsCache.push(cells[j]);
       }
     }
+    this.iterate(fn);
   };
 
   Grid.prototype.add = function(cell) {
     var x = cell.x
       , y = cell.y;
 
-    this[x] = this[x] || {};
-    this[x][y] = cell;
+    if (!this.cells[x]) this.cells[x] = [];
+    this.cells[x][y] = cell;
   };
 
   Grid.prototype.clearDead = function() {
-    var self = this;
+    var cells = this.cells
+      , self  = this;
 
     this.iterate(function(cell) {
       var x = cell.x
         , y = cell.y;
 
       if (!cell.alive && cell.countNeighbors(self) === 0) {
-        delete self[x][y];
+        cells[x][y] = null;
       }
     });
 
-    for (var column in this) {
-      if (isEmpty(this[column])) {
-        delete this[column];
-      }
-    }
+    this.cellsCache = null;
   };
 
   Grid.prototype.step = function() {
-    var self = this;
+    var self  = this
+      , cells = [];
 
     this.iterate(function(cell) {
+      cells.push(cell);
       cell.judge(self);
     });
 
-    this.iterate(function(cell) {
+    for (var i = 0, l = cells.length; i < l; i++) {
+      var cell = cells[i];
       if (cell.lives) {
         cell.animate();
         cell.createNeighbors(self);
       } else {
         cell.die();
       }
-    });
+    }
   };
 
   Grid.prototype.initialize = function(width, height) {
+    this.cells = [];
     for (var y = 0; y < height; y++) {
       for (var x = 0; x < width; x++) {
         if (0.8 < Math.random()) {
@@ -220,11 +226,17 @@
   var runGoL = function(grid) {
     display.refresh(grid);
 
-    var interval = setInterval(function() {
-      grid.clearDead();
-      grid.step();
-      display.refresh(grid);
-    }, Math.floor(1000 / settings.SPEED));
+    var interval = 1000 / settings.SPEED;
+
+    var anim = function() {
+      requestAnimationFrame(function() {
+        grid.clearDead();
+        grid.step();
+        display.refresh(grid);
+        setTimeout(anim, interval);
+      });
+    };
+    anim();
   };
 
   var startGame = function() {
