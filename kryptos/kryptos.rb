@@ -46,5 +46,13 @@ module Kryptos
     %w[S A B C D E F G H I J L M N Q U V W X Z K R Y P T O],
     %w[T O S A B C D E F G H I J L M N Q U V W X Z K R Y P]
   ]
+
+  EXAMPLE_PLAYFAIR_TABLE = [
+    %w[K R Y P T],
+    %w[O S A B C],
+    %w[D E F G H],
+    %w[I J L M N],
+    %w[U V W X Z]
+  ]
 end
 
