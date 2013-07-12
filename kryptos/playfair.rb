@@ -30,7 +30,7 @@ module Playfair
       # If our two matches share an index value, they're in the
       # same column and we push the values in the ensuing rows
       # to the ciphertext string; otherwise, we swap indices
-      if !matches.empty?
+      unless matches.empty?
         if matches[0][1] == matches[1][1]
           ciphertext << grid[(matches[0][0] + 1) % 5][matches[0][1]]
           ciphertext << grid[(matches[1][0] + 1) % 5][matches[1][1]]
@@ -50,7 +50,7 @@ module Playfair
   end
 
   def decrypt(ciphertext, grid)
-    # Do the above backwards
+    # TK: Do the above backwards
   end
 
   # Helpers
