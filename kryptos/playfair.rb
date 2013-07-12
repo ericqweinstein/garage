@@ -14,15 +14,15 @@ module Playfair
     matches = []
 
     pairs.each do |pair|
-      # If both elements of the pair are in the same row
+      # If both elements of the pair are in the same row,
+      # add the element to the right to the ciphertext
       grid.each_with_index do |row, index|
         if row.include?(pair[0]) && row.include?(pair[1])
           ciphertext << row[(row.index(pair[0]) + 1) % 5]
           ciphertext << row[(row.index(pair[1]) + 1) % 5]
-        end
+        else
         # If elements of the pair are in different rows,
         # store locations as (row, index) tuples for evaluation
-        if row.include?(pair[0]) ^ row.include?(pair[1])
           matches[0] = [index, row.index(pair[0])] if row.include?(pair[0])
           matches[1] = [index, row.index(pair[1])] if row.include?(pair[1])
         end
