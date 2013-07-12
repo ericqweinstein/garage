@@ -50,7 +50,6 @@ module Playfair
   end
 
   def decrypt(ciphertext, grid)
-    # TK: Do the above backwards
   end
 
   # Helpers
