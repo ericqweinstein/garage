@@ -19,17 +19,18 @@ describe Playfair do
   end
 
   describe '#build_table' do
-    it 'should generate a playfair grid given a key' do
+    it 'should generate a playfair table given a key' do
       build_table('kryptos').should eq(@grid)
     end
   end
   describe '#encrypt' do
-    it 'correctly encrypts plaintext given a grid' do
+    it 'should correctly encrypt plaintext given a table' do
       encrypt(@plaintext, @grid).should eq(@ciphertext)
     end
   end
   describe '#decrypt' do
-    it 'needs tests' do
+    it 'should correctly decrypt ciphertext given a table' do
+      decrypt(@ciphertext, @grid).should eq(@plaintext)
     end
   end
   describe '#bigramify' do

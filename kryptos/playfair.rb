@@ -69,10 +69,47 @@ module Playfair
 
     ciphertext = ciphertext.join('')
 
-    return ciphertext
+    ciphertext
   end
 
   def decrypt(ciphertext, grid)
+    plaintext = []
+    pairs = bigramify(ciphertext)
+    matches = []
+
+    pairs.each do |pair|
+      # If both elements of the pair are in the same row,
+      # add the element to the left to the ciphertext
+      grid.each_with_index do |row, index|
+        if row.include?(pair[0]) && row.include?(pair[1])
+          plaintext << row[(row.index(pair[0]) + 9) % 5]
+          plaintext << row[(row.index(pair[1]) + 9) % 5]
+        else
+        # If elements of the pair are in different rows,
+        # store locations as (row, index) tuples for evaluation
+          matches[0] = [index, row.index(pair[0])] if row.include?(pair[0])
+          matches[1] = [index, row.index(pair[1])] if row.include?(pair[1])
+        end
+      end
+      # If our two matches share an index value, they're in the
+      # same column and we push the values in the preceding rows
+      # to the ciphertext string; otherwise, we swap indices
+      unless matches.empty?
+        if matches[0][1] == matches[1][1]
+          plaintext << grid[(matches[0][0] + 9) % 5][matches[0][1]]
+          plaintext << grid[(matches[1][0] + 9) % 5][matches[1][1]]
+          2.times { matches.shift }
+        else
+          plaintext << grid[matches[0][0]][matches[1][1]]
+          plaintext << grid[matches[1][0]][matches[0][1]]
+          2.times { matches.shift }
+        end
+      end
+    end
+
+    plaintext = plaintext.join('')
+
+    plaintext
   end
 
   # Helpers
