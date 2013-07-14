@@ -19,7 +19,8 @@ describe Playfair do
   end
 
   describe '#build_table' do
-    it 'needs tests' do
+    it 'should generate a playfair grid given a key' do
+      build_table('kryptos').should eq(@grid)
     end
   end
   describe '#encrypt' do

@@ -6,6 +6,29 @@ module Playfair
   # (http://en.wikipedia.org/wiki/Playfair_cipher)
 
   def build_table(key)
+    # The key forms the first key.length letters
+    # of the 5 x 5 grid from left to right (after
+    # repeats are omitted), followed by the
+    # remaining letters of the alphabet in order.
+    # In this algorithm, the letter 'Q' is removed
+    # from the table entirely to make it 5 x 5.
+    #
+    # (See kryptos.rb for an example.)
+    key = key.upcase.split('').uniq
+    grid = [[], [], [], [], []]
+    grid_letters = key
+    rest_of_grid = ('A'..'Z').to_a
+    rest_of_grid.each do |letter|
+      grid_letters << letter unless key.include? letter
+    end
+
+    grid_letters.delete('Q')
+
+    grid.each_with_index do |row, index|
+      grid[index] = grid_letters[index * 5, 5]
+    end
+
+    grid
   end
 
   def encrypt(plaintext, grid)
