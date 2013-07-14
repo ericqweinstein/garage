@@ -137,6 +137,10 @@ module Playfair
     text_array << 'X' if text_array.length.odd?
 
     text = text_array.join('')
+
+    # Replace any Qs with Xs (since build_table omits Qs)
+    text.gsub!('Q', 'X')
+
     # Split into bigrams and kick out any empty strings
     pairs = text.split(/(.{2})/).reject { |pair| pair if pair.empty? }
     return pairs
