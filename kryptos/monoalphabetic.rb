@@ -4,6 +4,7 @@
 module Monoalphabetic
   # A pretty hacky ROT13 method.
   # (https://en.wikipedia.org/wiki/ROT13)
+
   def rot_13(plaintext) 
     letters    = plaintext.upcase.split('')
     ciphertext = []
