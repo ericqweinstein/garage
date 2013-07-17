@@ -1,21 +1,46 @@
 #!/usr/bin/env ruby -w
 # encoding: UTF-8
 
-module Monoalphabetic
-  # A pretty hacky ROT13 method.
-  # (https://en.wikipedia.org/wiki/ROT13)
+# Author:: Eric Weinstein
+# Copyright:: (c) 2013 Eric Weinstein
+# License:: MIT (see LICENSE)
 
-  def rot_13(plaintext) 
-    letters    = plaintext.upcase.split('')
+module Monoalphabetic
+  ##
+  # Assorted tools for encrypting/decrypting monoalphabetic substitution ciphers
+  # (https://en.wikipedia.org/wiki/Substitution_cipher)
+
+  # An error raised when a non-alphabetic character is passed to an encryption/
+  # decryption method.
+  class CharacterError < Exception; end
+
+  # Encrypts and decrypts text via ROT13 (https://en.wikipedia.org/wiki/ROT13).
+  #
+  # * Each letter is shifted by 13 places in the alphabet, _e.g._ A -> N.
+  # * Because encryption/decryption are symmetric, the same method is used to
+  #   both encrypt and decrypt text.
+  # 
+  # === Parameter(s)
+  # +plaintext+ - +string+: the text to be encrypted or decrypted.
+  #
+  # === Return Value
+  # +string+: the encrypted/decrypted text.
+  #
+  # === Example
+  #
+  # +rot_13('HELLO')+
+  # +=> "URYYB"+
+  def rot_13(plaintext)
+    raise CharacterError.new('Your plaintext must be a string') unless plaintext.respond_to? :upcase
+    letters = plaintext.upcase.split('')
+
     ciphertext = []
 
     letters.each do |letter|
+      raise CharacterError.new('Your plaintext may include only letters') unless alphabet.include? letter
+
       index_to_check = alphabet.index(letter)
-      if index_to_check < 13
-        ciphertext << alphabet[index_to_check + 13]
-      else
-        ciphertext << alphabet[index_to_check - 13]
-      end
+      index_to_check < 13 ? ciphertext << alphabet[index_to_check + 13] : ciphertext << alphabet[index_to_check -13]
     end
 
     ciphertext = ciphertext.join('')
