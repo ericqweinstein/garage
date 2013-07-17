@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require_relative '../monoalphabetic.rb'
+require_relative '../lib/monoalphabetic.rb'
 
 describe Monoalphabetic do
   include Monoalphabetic

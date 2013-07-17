@@ -1,12 +1,12 @@
 # encoding: UTF-8
 
-require_relative '../playfair.rb'
+require_relative '../lib/playfair.rb'
 
 describe Playfair do
   include Playfair
 
   before do
-    @grid = [
+    @table = [
       %w[K R Y P T],
       %w[O S A B C],
       %w[D E F G H],
@@ -20,17 +20,17 @@ describe Playfair do
 
   describe '#build_table' do
     it 'should generate a playfair table given a key' do
-      build_table('kryptos').should eq(@grid)
+      build_table('kryptos').should eq(@table)
     end
   end
   describe '#encrypt' do
     it 'should correctly encrypt plaintext given a table' do
-      encrypt(@plaintext, @grid).should eq(@ciphertext)
+      encrypt(@plaintext, @table).should eq(@ciphertext)
     end
   end
   describe '#decrypt' do
     it 'should correctly decrypt ciphertext given a table' do
-      decrypt(@ciphertext, @grid).should eq(@plaintext)
+      decrypt(@ciphertext, @table).should eq(@plaintext)
     end
   end
   describe '#bigramify' do

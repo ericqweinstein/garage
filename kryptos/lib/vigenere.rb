@@ -1,7 +1,12 @@
 #!/usr/bin/env ruby -w
 # encoding: UTF-8
 
+# Author:: Eric Weinstein
+# Copyright:: (c) 2013 Eric Weinstein
+# License:: MIT (see LICENSE)
+
 module Vigenere
+  ##
   # Encryption/decryption using Vigenère ciphers
   # (http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
 
