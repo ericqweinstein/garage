@@ -25,7 +25,7 @@ module Vigenere
   # +build_table('KRYPTOS', 'PALIMPSEST')+
   #
   # (See +EXAMPLE_VIGENERE_TABLE+ in +krpytos.rb+ for the result.)
-  def build_table(key1=alphabet, key2)
+  def build_table(key1=alphabet.join(''), key2)
     table = []
 
     key1.upcase!

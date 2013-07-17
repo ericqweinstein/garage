@@ -7,18 +7,19 @@ describe Autokey do
 
   before do
     @plaintext  = 'ATTACKATDAWN'
-    @keyword    = 'TEST'
-    @ciphertext = 'TXLTCDTTFKWG'
+    @tabula     = build_tabula_recta
+    @keyword    = 'KRYPTOS'
+    @ciphertext = 'KKRPVYSTWTWP'
   end
 
   describe '#encrypt' do
     it 'should correctly encrypt plaintext given a keyword' do
-      # encrypt(@plaintext, @key).should eq(@ciphertext)
+      encrypt(@plaintext, @tabula, @keyword).should eq(@ciphertext)
     end
   end
   describe '#decrypt' do
     it 'should correctly decrypt ciphertext given a keyword' do
-      # decrypt(@ciphertext, @key).should eq(@plaintext)
+      decrypt(@ciphertext, @tabula, @keyword).should eq(@plaintext)
     end
   end
 end
