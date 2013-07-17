@@ -21,23 +21,23 @@ module Monoalphabetic
   #   both encrypt and decrypt text.
   # 
   # === Parameter(s)
-  # +plaintext+ - +string+: the text to be encrypted or decrypted.
+  # +plaintext+ - +String+: the text to be encrypted or decrypted.
   #
   # === Return Value
-  # +string+: the encrypted/decrypted text.
+  # +String+: the encrypted/decrypted text.
   #
   # === Example
   #
   # +rot_13('HELLO')+
   # +=> "URYYB"+
   def rot_13(plaintext)
-    raise CharacterError.new('Your plaintext must be a string') unless plaintext.respond_to? :upcase
+    raise CharacterError.new('Plaintext must be a string') unless plaintext.respond_to? :upcase
     letters = plaintext.upcase.split('')
 
     ciphertext = []
 
     letters.each do |letter|
-      raise CharacterError.new('Your plaintext may include only letters') unless alphabet.include? letter
+      raise CharacterError.new('Plaintext may include only letters') unless alphabet.include? letter
 
       index_to_check = alphabet.index(letter)
       index_to_check < 13 ? ciphertext << alphabet[index_to_check + 13] : ciphertext << alphabet[index_to_check -13]
