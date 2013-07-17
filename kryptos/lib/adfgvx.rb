@@ -10,12 +10,15 @@ module ADFGVX
   # Encryption/decryption using ADFGVX ciphers
   # (http://en.wikipedia.org/wiki/ADFGVX_cipher)
 
+  # Public: builds the Polybius square needed to encrypt text via ADFGVX cipher.
   def build_square
   end
 
+  # Public: encrypts plaintext via ADFGVX cipher.
   def encrypt
   end
 
+  # Public: decrypts plaintext via ADFGVX cipher.
   def decrypt
   end
 end

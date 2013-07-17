@@ -14,7 +14,7 @@ module Monoalphabetic
   # decryption method.
   class CharacterError < Exception; end
 
-  # Encrypts and decrypts text via ROT13 (https://en.wikipedia.org/wiki/ROT13).
+  # Public: encrypts and decrypts text via ROT13 (https://en.wikipedia.org/wiki/ROT13).
   #
   # * Each letter is shifted by 13 places in the alphabet, _e.g._ A -> N.
   # * Because encryption/decryption are symmetric, the same method is used to
@@ -48,6 +48,13 @@ module Monoalphabetic
     ciphertext
   end
 
+  # Private: generates an alphabet.
+  #
+  # === Parameter(s)
+  # None.
+  #
+  # === Return Value
+  # +Array+: an array comprising the letters of the alphabet.
   def alphabet
     ('A'..'Z').to_a
   end

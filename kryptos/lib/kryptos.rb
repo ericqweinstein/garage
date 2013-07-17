@@ -7,7 +7,7 @@
 
 module Kryptos
   ##
-  # == K1 - K4
+  # == K1, K2, K3, K4
   #
   # These are the four parts of the Kryptos sculpture
   # (http://en.wikipedia.org/wiki/Kryptos).
