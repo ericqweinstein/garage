@@ -22,7 +22,6 @@ module Playfair
   # +Array+: a two-dimensional array of characters (5 x 5).
   #
   # === Example
-  #
   # +build_table('KRYPTOS')+
   #
   # (See +EXAMPLE_PLAYFAIR_TABLE+ in +kryptos.rb+ for the result.)
