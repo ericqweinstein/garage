@@ -5,5 +5,31 @@ require_relative '../lib/transposition.rb'
 describe Transposition do
   include Transposition
 
+  before do
+    @ciphertext = 'ENDYAHROHNLSRHEOCPTEOIBIDYSHNAIACHTNREYULDSLLSLL'\
+                  'NOHSNOSMRWXMNETPRNGATIHNRARPESLNNELEBLPIIACAEWMT'\
+                  'WNDITEENRAHCTENEUDRETNHAEOETFOLSEDTIWENHAEIOYTEY'\
+                  'QHEENCTAYCREIFTBRSPAMHHEWENATAMATEGYEERLBTEEFOAS'\
+                  'FIOTUETUAEOTOARMAEERTNRTIBSEDDNIAAHTTMSTEWPIEROA'\
+                  'GRIEWFEBAECTDDHILCEIHSITEGOEAOSDDRYDLORITRKLMLEH'\
+                  'AGTDHARDPNEOHMGFMFEUHEECDMRIPFEIMEHNLSSTTRTVDOHW'
+    @plaintext  = 'SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDEBRIST'\
+                  'HATENCUMBEREDTHELOWERPARTOFTHEDOORWAYWASREMOVEDW'\
+                  'ITHTREMBLINGHANDSIMADEATINYBREACHINTHEUPPERLEFTH'\
+                  'ANDCORNERANDTHENWIDENINGTHEHOLEALITTLEIINSERTEDT'\
+                  'HECANDLEANDPEEREDINTHEHOTAIRESCAPINGFROMTHECHAMB'\
+                  'ERCAUSEDTHEFLAMETOFLICKERBUTPRESENTLYDETAILSOFTH'\
+                  'EROOMWITHINEMERGEDFROMTHEMISTXCANYOUSEEANYTHINGQ'
+  end
+
+  describe '#encrypt' do
+    it 'needs tests' do
+    end
+  end
+  describe '#decrypt' do
+    it 'should correctly decrypt tranposed ciphertext' do
+      decrypt(decrypt(@ciphertext, 4), 48).should eq(@plaintext)
+    end
+  end
 end
 
