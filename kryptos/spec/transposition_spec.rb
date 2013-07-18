@@ -27,7 +27,7 @@ describe Transposition do
     end
   end
   describe '#decrypt' do
-    it 'should correctly decrypt tranposed ciphertext' do
+    it 'should correctly decrypt transposed ciphertext' do
       decrypt(decrypt(@ciphertext, 4), 48).should eq(@plaintext)
     end
   end
