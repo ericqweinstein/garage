@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require_relative '../lib/transposition.rb'
+require_relative '../lib/dekryptos/transposition.rb'
 
 describe Transposition do
   include Transposition

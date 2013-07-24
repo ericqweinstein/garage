@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require_relative '../lib/playfair.rb'
+require_relative '../lib/dekryptos/playfair.rb'
 
 describe Playfair do
   include Playfair

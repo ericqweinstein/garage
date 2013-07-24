@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require_relative '../lib/vigenere.rb'
+require_relative '../lib/dekryptos/vigenere.rb'
 
 describe Vigenere do
   include Vigenere

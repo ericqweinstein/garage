@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require_relative '../lib/autokey.rb'
+require_relative '../lib/dekryptos/autokey.rb'
 
 describe Autokey do
   include Autokey
