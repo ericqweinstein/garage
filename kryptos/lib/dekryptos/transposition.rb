@@ -7,7 +7,7 @@
 
 module Transposition
   ##
-  # Encryption/decryption using keyed columnar substitution
+  # Encryption/decryption using keyed columnar transposition
   # (http://en.wikipedia.org/wiki/Transposition_cipher)
 
   # Public: encrypts text via keyed columnar transposition.
