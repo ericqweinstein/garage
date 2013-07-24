@@ -23,7 +23,8 @@ describe Transposition do
   end
 
   describe '#encrypt' do
-    it 'needs tests' do
+    it 'should correctly decrypt transposed ciphertext' do
+      encrypt(encrypt(@plaintext, 7), 84).should eq(@ciphertext)
     end
   end
   describe '#decrypt' do
