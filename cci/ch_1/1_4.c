@@ -37,7 +37,6 @@ int replaceAllSpacesWithPercent20(char *str)
   // Assuming 100 characters afforded sufficient space,
   // this ensures we have padding to the end of our string
   char buffer[MAX_STRING_LENGTH];
-
   strncpy(buffer, str, MAX_STRING_LENGTH);
 
   // I interpret the instructions as requiring that the
