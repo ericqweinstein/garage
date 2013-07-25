@@ -34,7 +34,7 @@ int stringsAreAnagrams(char *str1, char *str2)
   if (stringOneLength != stringTwoLength)
   {
     printf("Strings are not permutations of one another.\n");
-    return -1;
+    return 1;
   }
 
   int stringOneAlphabet[122] = { 0 };
@@ -52,9 +52,10 @@ int stringsAreAnagrams(char *str1, char *str2)
     if (stringOneAlphabet[i] != stringTwoAlphabet[i])
     {
       printf("Strings are not permutations of one another.\n");
-      return -1;
+      return 1;
     }
   }
+
   printf("Strings are permutations of one another.\n");
   return 0;
 }

@@ -35,7 +35,7 @@ int stringHasAllUniqueChars(void)
     if (alphabet[str[i]] > 0)
     {
       printf("String contains repeating letter: %c\n", str[i]);
-      return 0;
+      return 1;
     }
     else
     {
@@ -45,6 +45,6 @@ int stringHasAllUniqueChars(void)
 
   printf("String contains no repeating letters.\n");
   free(str);
-  return 1;
+  return 0;
 }
 
