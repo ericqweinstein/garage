@@ -51,7 +51,7 @@ int compress(char *str)
       // As soon as we see a new character, combine the
       // current one and a char representing the repeat
       // count (this will only work for repeat counts in
-      // [1..9]) and concatenate that to compressedString.
+      // [1..9]) and concatenate that to compressedString
       char *charAndCount = malloc(sizeof(char) * 3);
       memset(charAndCount, str[i], 1);
       memset(charAndCount + 1, charRepeatCount + 48, 1);
