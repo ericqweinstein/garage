@@ -79,14 +79,14 @@ int setRowAndColumnToZero(int *array, int length, int width)
     }
   }
 
-  // Now for each 1 in the marked array, we'll set
-  // every value in its row and column to zero
+  // For each 1 in the marked array, we'll set corresponding
+  // value(s) in our array's row(s) and column(s) to zero
   int j, k, m, n;
   for (j = 0; j < length; j++)
   {
     if (marked[j] == 1)
     {
-      // Set everything in the marked row to zero
+      // Set everything in our array's "marked" rows to zero
       k = j;
       while (k % width != 0)
       {
@@ -96,7 +96,7 @@ int setRowAndColumnToZero(int *array, int length, int width)
       {
         array[m] = 0;
       }
-      // Set everything in the marked column to zero
+      // Set everything in our array's "marked" columns to zero
       for (n = j; n < length * 2; n++)
       {
         if ((((n + width) % length) - j) % width == 0)
