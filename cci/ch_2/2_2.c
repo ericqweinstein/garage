@@ -87,7 +87,7 @@ void displayList(Node *node)
 {
   while (node != NULL)
   {
-    printf("%d ", (int)(node -> data));
+    printf("%d ", node -> data);
     node = node -> next;
   }
   printf("\n");
