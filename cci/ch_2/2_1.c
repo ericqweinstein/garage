@@ -101,7 +101,7 @@ Node* appendToList(int value, Node *currentNode)
 
 void displayList(Node *node)
 {
-  while(node != NULL)
+  while (node != NULL)
   {
     printf("%d ", node -> data);
     node = node -> next;
