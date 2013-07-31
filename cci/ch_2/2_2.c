@@ -96,10 +96,10 @@ void displayList(Node *node)
 void displayKthToLastElement(int k, Node *node)
 {
   // (For our purposes, "1th to last" == "last")
-  int kMinusOne = countNodesInList(node) - k;
+  int kthToLast = countNodesInList(node) - k;
 
   int i;
-  for (i = 0; i < kMinusOne; i++)
+  for (i = 0; i < kthToLast; i++)
   {
     node = node -> next;
   }
