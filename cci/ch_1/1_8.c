@@ -20,6 +20,14 @@ int main(void)
 
   printf("String one (50 characters max): ");
   fgets(stringOneWithNewline, sizeof(buffer), stdin);
+
+  // If the input comprises only the newline character
+  if (strlen(stringOneWithNewline) == 1)
+  {
+    printf("String must have a non-zero length.\n");
+    exit(-1);
+  }
+
   // This looks weird, but all it does is tokenize the string
   // on newlines, thereby removing the final "\n" from input
   //
@@ -30,6 +38,13 @@ int main(void)
 
   printf("String two (50 characters max): ");
   fgets(stringTwoWithNewline, sizeof(buffer), stdin);
+
+  if (strlen(stringTwoWithNewline) == 1)
+  {
+    printf("Strings must have a non-zero length.\n");
+    exit(-1);
+  }
+
   char *stringTwo = strtok(stringTwoWithNewline, "\n");
 
   isRotation(stringOne, stringTwo);
@@ -40,6 +55,10 @@ int main(void)
 int isSubstring(char *s1, char *s2)
 {
   // Might as well implement isSubstring
+  //
+  // Note: we don't need to guard against
+  // zero-length input for either string
+  // here, since we've already done that
   char *ptr = strstr(s1, s2);
   return ptr == NULL ? 0 : 1;
 }
