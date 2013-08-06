@@ -18,10 +18,10 @@ typedef struct node
   struct node *next;
 } Node;
 
-Node* removeDuplicatesFromList(Node*);
-Node* createTestList(void);
-Node* appendToList(int, Node*);
-void displayList(Node*);
+Node * removeDuplicatesFromList(Node *);
+Node * createTestList(void);
+Node * appendToList(int, Node *);
+void displayList(Node *);
 
 int main(void)
 {

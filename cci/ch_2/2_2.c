@@ -11,10 +11,10 @@ typedef struct node
 } Node;
 
 int countNodesInList(Node *);
-void displayKthToLastElement(int, Node*);
+void displayKthToLastElement(int, Node *);
 
-Node* createTestList(void);
-Node* appendToList(int, Node*);
+Node * createTestList(void);
+Node * appendToList(int, Node *);
 void displayList(Node *);
 
 int main(void)
