@@ -36,7 +36,7 @@ int main(void)
 // to N, then delete N + 1.
 void deleteNode(Node *n)
 {
-  Node *nodeToDelete = n -> next;
+  nodeToDelete = n -> next;
   n -> data = nodeToDelete -> data;
   n -> next = nodeToDelete -> next;
   nodeToDelete = NULL;
