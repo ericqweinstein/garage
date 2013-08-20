@@ -38,7 +38,7 @@ List * partitionList(int value, List *list)
   // Initialize a new linked list with the value
   List *duplicate = createList(value);
 
-  // Iterate over the original list, (app|pre)pending as needed
+  // Iterate over the original list, (ap|pre)pending as needed
   Node *node = list -> head;
   while (node != NULL)
   {
