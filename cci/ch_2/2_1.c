@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "list.h"
 
 // We're essentially implementing a set, only we're guaranteeing
 // O(n) time complexity instead of the O(log(n)) that would be
@@ -11,33 +12,25 @@
 // if we were to sort the linked list via mergesort/quicksort then
 // traverse the list, or O(n) if we were to implement a hash table
 
-typedef struct node
-{
-  // The data type wasn't specified, so we'll use ints
-  int data;
-  struct node *next;
-} Node;
-
-Node * removeDuplicatesFromList(Node *);
-Node * createTestList(void);
-Node * appendToList(int, Node *);
-void displayList(Node *);
+List * removeDuplicatesFromList(List *);
 
 int main(void)
 {
-  Node *root = createTestList();
-  displayList(root);
-  removeDuplicatesFromList(root);
-  displayList(root);
+  List *list = createList(1);
+  appendToList(2, list);
+  appendToList(3, list);
+  appendToList(2, list);
+  displayList(list);
+  removeDuplicatesFromList(list);
+  displayList(list);
 
   return 0;
 }
 
-Node* removeDuplicatesFromList(Node *root)
+List * removeDuplicatesFromList(List *list)
 {
   Node *ptr1, *ptr2, *tmp;
-
-  ptr1 = root;
+  ptr1 = list -> head;
 
   while(ptr1 != NULL && ptr1 -> next != NULL)
   {
@@ -64,48 +57,6 @@ Node* removeDuplicatesFromList(Node *root)
   free(ptr1);
   free(ptr2);
 
-  return root;
-}
-
-Node* createTestList()
-{
-  Node *root = NULL;
-  root = malloc(sizeof(Node));
-
-  root -> data = 1;
-  root -> next = NULL;
-
-  appendToList(2, root);
-  appendToList(3, root);
-  appendToList(2, root);
-
-  return root;
-}
-
-Node* appendToList(int value, Node *currentNode)
-{
-  // Traverse to the end of the list
-  while (currentNode -> next != NULL)
-  {
-    currentNode = currentNode -> next;
-  }
-
-  Node *newNode = (Node *) malloc(sizeof(Node));
-  newNode -> data = value;
-  newNode -> next = NULL;
-
-  currentNode -> next = newNode;
-
-  return newNode;
-}
-
-void displayList(Node *node)
-{
-  while (node != NULL)
-  {
-    printf("%d ", node -> data);
-    node = node -> next;
-  }
-  printf("\n");
+  return list;
 }
 
