@@ -71,6 +71,9 @@ Node * getStartOfLoop(List *list)
   // other, we'll know there's a loop; since our pointers will
   // cross just past the loop, we'll use a third pointer to
   // keep track of the node that marks the start of the loop.
+  //
+  // TODO: Review the logic here/test with additional lists--
+  // not yet convinced this works in the general case
 
   Node *oneBack = list -> head;
   Node *slow    = list -> head;
