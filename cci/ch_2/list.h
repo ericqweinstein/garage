@@ -26,7 +26,7 @@ List * createList(int value)
   List *list = NULL;
   list = malloc(sizeof(List));
 
-  list -> size = 0;
+  list -> size = 1;
   list -> head = root;
 
   return list;
