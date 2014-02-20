@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
-require_relative '../lib/dekryptos/transposition.rb'
+# Author:: Eric Weinstein
+require 'spec_helper'
 
 describe Transposition do
   include Transposition
@@ -33,4 +34,3 @@ describe Transposition do
     end
   end
 end
-

@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
-require_relative '../lib/dekryptos/playfair.rb'
+# Author:: Eric Weinstein
+require 'spec_helper'
 
 describe Playfair do
   include Playfair
@@ -13,7 +14,7 @@ describe Playfair do
       %w[I J L M N],
       %w[U V W X Z]
     ]
-    
+
     @ciphertext = 'CYYCOTCYFOZL'
     @plaintext  = 'ATTACKATDAWN'
   end
@@ -46,4 +47,3 @@ describe Playfair do
     end
   end
 end
-

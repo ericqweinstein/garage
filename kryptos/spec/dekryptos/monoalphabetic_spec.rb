@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
-require_relative '../lib/dekryptos/monoalphabetic.rb'
+# Author:: Eric Weinstein
+require 'spec_helper'
 
 describe Monoalphabetic do
   include Monoalphabetic
@@ -19,4 +20,3 @@ describe Monoalphabetic do
     end
   end
 end
-

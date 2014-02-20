@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
-require_relative '../lib/dekryptos/autokey.rb'
+# Author:: Eric Weinstein
+require 'spec_helper'
 
 describe Autokey do
   include Autokey
@@ -23,4 +24,3 @@ describe Autokey do
     end
   end
 end
-

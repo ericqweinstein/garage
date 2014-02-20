@@ -1,6 +1,7 @@
 # encoding: UTF-8
 
-require_relative '../lib/dekryptos/vigenere.rb'
+# Author:: Eric Weinstein
+require 'spec_helper'
 
 describe Vigenere do
   include Vigenere
@@ -41,4 +42,3 @@ describe Vigenere do
     end
   end
 end
-
