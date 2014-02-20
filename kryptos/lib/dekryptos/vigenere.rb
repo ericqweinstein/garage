@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby -w
 # encoding: UTF-8
 
 # Author:: Eric Weinstein
@@ -104,6 +103,8 @@ module Vigenere
     plaintext
   end
 
+  private
+
   # Private: builds a row in our Vigenère table.
   #
   # === Parameter(s)
@@ -131,4 +132,3 @@ module Vigenere
     ('A'..'Z').to_a
   end
 end
-

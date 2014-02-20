@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby -w
 # encoding: UTF-8
 
 # Author:: Eric Weinstein
@@ -155,6 +154,8 @@ module Playfair
     plaintext
   end
 
+  private
+
   # Private: converts text to bigrams for processing by our encryption/decryption methods.
   #
   # * If we encounter a double-letter bigram, we break it up with an X.
@@ -187,4 +188,3 @@ module Playfair
     return pairs
   end
 end
-

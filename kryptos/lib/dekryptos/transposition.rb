@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby -w
 # encoding: UTF-8
 
 # Author:: Eric Weinstein
@@ -37,7 +36,7 @@ module Transposition
 
     matrix.transpose.map(&:reverse).join('')
   end
-  
+
   # Public: decrypts text via keyed columnar transposition.
   #
   # The decryption method converts the ciphertext to an array,
@@ -67,4 +66,3 @@ module Transposition
     matrix.map(&:reverse).transpose.join('')
   end
 end
-

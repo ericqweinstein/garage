@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby -w
 # encoding: UTF-8
 
 # Author:: Eric Weinstein
@@ -19,7 +18,7 @@ module Monoalphabetic
   # * Each letter is shifted by 13 places in the alphabet, _e.g._ A -> N.
   # * Because encryption/decryption are symmetric, the same method is used to
   #   both encrypt and decrypt text.
-  # 
+  #
   # === Parameter(s)
   # +plaintext+ - +String+: the text to be encrypted or decrypted.
   #
@@ -48,6 +47,8 @@ module Monoalphabetic
     ciphertext
   end
 
+  private
+
   # Private: generates an alphabet.
   #
   # === Parameter(s)
@@ -59,4 +60,3 @@ module Monoalphabetic
     ('A'..'Z').to_a
   end
 end
-

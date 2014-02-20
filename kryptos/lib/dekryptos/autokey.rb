@@ -1,8 +1,7 @@
-#!/usr/bin/env ruby -w
 # encoding: UTF-8
 
 # Author:: Eric Weinstein
-# Copyright:: (c) 2013 Eric Weinstein
+# Copyright:: (c) 2014 Eric Weinstein
 # License:: MIT (see LICENSE)
 
 module Autokey
@@ -104,6 +103,8 @@ module Autokey
     table
   end
 
+  private
+
   # Private: generates an alphabet.
   #
   # === Parameter(s)
@@ -115,4 +116,3 @@ module Autokey
     ('A'..'Z').to_a
   end
 end
-

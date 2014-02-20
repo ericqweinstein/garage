@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby -w
 # encoding: UTF-8
 
 # Author:: Eric Weinstein
@@ -68,4 +67,3 @@ module Kryptos
     %w[U V W X Z]
   ]
 end
-
