@@ -9,7 +9,5 @@ Things move in as I start small new projects that don't have an immediate home &
 * /cci: Some of my solutions to questions in _Cracking the Coding Interview_ (5th edition).
 * /codepoem: A web application designed to demonstrate the intersection between programming and poetry. (Currently just serves the COMING SOON page.)
 * /conway: Conway's Game of Life in JavaScript.
-* /kryptos: A few small files for playing around with [Kryptos](http://en.wikipedia.org/wiki/Kryptos).
 * /spock: An IRC chat bot written in Haskell, more or less straight from [the Haskell wiki](http://www.haskell.org/haskellwiki/Roll_your_own_IRC_bot). He doesn't do much yet.
 * /wwd: "What's Weinstein Doing," a tiny Clojure app I made that displays my most recent `#wwd` tweet.
-
