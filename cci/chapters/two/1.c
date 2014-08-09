@@ -59,4 +59,3 @@ List * removeDuplicatesFromList(List *list)
 
   return list;
 }
-

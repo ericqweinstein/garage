@@ -84,4 +84,3 @@ void displayList(Node *node)
   }
   printf("\n");
 }
-

@@ -54,7 +54,7 @@ int checkForZeroes(int *array, int length, int width)
       return 0;
     }
   }
-  
+
   printf("No zeroes detected.\n");
   return 1;
 }
@@ -125,4 +125,3 @@ void printArray(int *array, int length, int width)
     }
   }
 }
-

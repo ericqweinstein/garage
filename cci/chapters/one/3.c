@@ -59,4 +59,3 @@ int stringsAreAnagrams(char *str1, char *str2)
   printf("Strings are permutations of one another.\n");
   return 0;
 }
-

@@ -68,4 +68,3 @@ int replaceAllSpacesWithPercent20(char *str)
   printf("%s\n", buffer);
   return 0;
 }
-

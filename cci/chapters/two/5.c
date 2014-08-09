@@ -81,4 +81,3 @@ List * addLinkedListNumbers(List *a, List *b)
 
   return sumList;
 }
-

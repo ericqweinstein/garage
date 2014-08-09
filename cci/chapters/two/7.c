@@ -62,4 +62,3 @@ int isListPalindrome(List *list)
   printf("This list is a palindrome.\n");
   return 0;
 }
-

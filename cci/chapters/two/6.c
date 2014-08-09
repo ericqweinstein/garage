@@ -53,7 +53,7 @@ List * createListWithLoop()
 
   five -> data = 69;
   five -> next = three;
- 
+
   List *list = NULL;
   list = malloc(sizeof(List));
 
@@ -93,4 +93,3 @@ Node * getStartOfLoop(List *list)
     }
   }
 }
-

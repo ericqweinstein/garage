@@ -42,4 +42,3 @@ void reverse(char *str)
 
   printf("Reversed string is: %s\n", backwards);
 }
-

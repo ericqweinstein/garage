@@ -106,4 +106,3 @@ void displayKthToLastElement(int k, Node *node)
 
   printf("For k = %d, kth to last element is %d.\n", k, node -> data);
 }
-

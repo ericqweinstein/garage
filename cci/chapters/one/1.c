@@ -19,7 +19,7 @@ int stringHasAllUniqueChars(void)
 
   // Initialize an array of all zeroes
   int alphabet[122] = { 0 };
-  
+
   char buffer[100];
   char *str = malloc(sizeof(buffer) + 1);
 
@@ -47,4 +47,3 @@ int stringHasAllUniqueChars(void)
   free(str);
   return 0;
 }
-

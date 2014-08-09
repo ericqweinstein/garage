@@ -71,4 +71,3 @@ int compress(char *str)
   free(compressedString);
   return 0;
 }
-

@@ -55,4 +55,3 @@ List * partitionList(int value, List *list)
 
   return duplicate;
 }
-

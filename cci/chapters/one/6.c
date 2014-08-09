@@ -77,4 +77,3 @@ void printArray(int *array, int length, int width)
     }
   }
 }
-
