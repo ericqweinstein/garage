@@ -32,7 +32,7 @@ List * removeDuplicatesFromList(List *list)
   Node *ptr1, *ptr2, *tmp;
   ptr1 = list -> head;
 
-  while(ptr1 != NULL && ptr1 -> next != NULL)
+  while (ptr1 != NULL && ptr1 -> next != NULL)
   {
     ptr2 = ptr1;
     while (ptr2 -> next != NULL)
